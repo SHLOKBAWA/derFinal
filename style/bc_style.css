@@ -1,0 +1,327 @@
+
+@font-face {
+	font-family: passion;
+	src: url(./Fonts/passion.otf);
+}
+@font-face {
+	font-family: deep;
+	src: url(./Fonts/deep.ttf);
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	font-family: passion;
+}
+.mySlides {
+	display: none;
+}
+.mySlides img {
+	border-radius: 20px 20px;
+}
+/* Hover Effects on icon */
+.hovicon {
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+.hovicon:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content:'';
+    box-sizing: content-box;
+}
+.hovicon:before {
+    speak: none;
+    font-size: 30px;
+    line-height: 60px;
+    display: block;
+}
+.hovicon.effect-2 {
+    color: #eea303;
+    box-shadow: 0 0 0 3px #fff;
+    transition: color 0.3s;
+}
+.hovicon.effect-2:after {
+    top: -2px;
+    left: -2px;
+    padding: 2px;
+    z-index: -1;
+    background: #fff;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+ .hovicon.effect-2.sub-a:hover, .hovicon.effect-2.sub-a:hover i {
+    color: #eea303;
+}
+.hovicon.effect-2.sub-a:hover:after {
+    transform: scale(0.85);
+}
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: 200%;
+    position: relative;
+    box-shadow: 4px 10px 4px #32743D;
+	border-radius: 20px 20px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    visibility: hidden;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Navigation List */
+.top-right {
+	width: 100%;
+	background: #0003;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.top-right nav ul li {
+	float: right;
+	list-style: none;
+	margin: 5px 20px;
+}
+.top-right nav ul li a {
+	color: white;
+	text-align: right;
+	text-decoration: none;
+}
+.top-right nav ul li a:hover{
+	text-decoration: underline;
+}
+/* Logo Row */
+.logorow {
+	background: #0005;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+}
+.logorow nav ul li{
+	float: left;
+	padding: 3px;
+	margin: 10% 1%;
+}
+.logorow nav ul li a {
+	font-size: 1.8em;
+	color: white;
+}
+#logo {
+	width: 50%;
+	margin: 2% 5%;
+}
+#icon {
+	margin: 10% 1%;
+}
+.expand{
+  position:relative;
+  text-decoration:none;
+  display:inline-block;
+}
+.expand:after {
+  display:block;
+  content: '';
+  border-bottom: solid 5px white;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin:100% 50%
+}
+.expand:hover:after { 
+  transform: scaleX(1);
+  transform-origin:0 50%;
+}
+/* Search Form */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+.overlay .closebtn:hover {
+    color: #ccc;
+}
+.overlay input[type=text] {
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 99%;
+	margin-left:auto;
+	margin-right:auto;
+    background: white;
+}
+.overlay input[type=text]:hover {
+    background: #f1f1f1;
+}
+.overlay button {
+	border-radius: 10px 10px;
+    width: 30%;
+    padding: 15px;
+    background: #32743D;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.overlay button:hover {
+    background: #258d31;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 25%; 
+    width: 90%;
+	margin:auto;
+    text-align: center;
+    margin-top: 30px; 
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+/* Section Styles */
+#sect1 {
+	margin: 4% 0%;
+	background: #32743D;
+	color: white;
+}
+#p1 {
+	padding: 2em;
+	width: 70%;
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#p2 {
+	margin: 2%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size:2.5em; 
+	
+}
+#col-1-2 img {
+	width: 48%;
+	border-radius: 10px 10px;
+}
+.under {
+	position: relative;
+	z-index: 1;
+}
+.over {
+	position: relative;
+	z-index: 2;
+	top: 55px;
+	left:-45px;
+}
+.col-2-3 img {
+	width: 80%;
+	margin-left: 10%;
+	border-radius: 10px 10px;
+}
+#sect2 {
+	width: 100%;
+	position: relative;
+	opacity: 0.4;
+}
+/* Video Section */
+video {
+	width:100%;	
+	border-radius: 20px 20px;
+}
+
+/* Form */
+.center {
+	position: absolute;
+	top: 4700px;
+    left: 50%;
+	text-align: center;
+	width: 100%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+	font-size: 4em;
+}
+h3 {
+	font-size: 2em;
+}
+
+/* Footer Styles */
+#foot {
+	background: #32743D;
+	color: white;
+	text-align: center;
+}
+#foot h3 {
+	margin-top: 20%;
+}
+#foot nav ul li {
+	margin-bottom: 1%;
+}
+#foot nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+}
+#foot nav ul li a:hover {
+	text-decoration: underline;
+}

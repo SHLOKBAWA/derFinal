@@ -1,0 +1,23 @@
+
+form {
+	width: 100%;
+	margin-top: 10%;
+}
+input[type="text"],input[type=submit] {
+	font-size: 1.5vw;
+	background: white;
+	padding: 0.5em;
+	border-radius: 10px 10px;
+}
+input[type=submit] {
+	background: #32743D;
+	width:20%;
+	color: white;
+	border-radius: 10px 10px;
+}
+input[type="submit"]:hover {
+	background: #258d31;
+	cursor: pointer;
+}
+
+	

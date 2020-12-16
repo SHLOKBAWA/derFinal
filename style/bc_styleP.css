@@ -1,0 +1,57 @@
+
+* {
+	box-sizing: border-box;
+}
+#sect {
+	background: #6a3519;
+	margin:5% 0%;
+}
+#sect p {
+	text-align:center;
+	color:white;
+	padding:2em;
+	font-size:2em;
+}
+.colp {
+	width: 45%;
+}
+form {
+	padding: 2em;
+	height:150px;
+}
+#input[type="text"]
+{
+	color:#6a3519;
+	font-size:1em;
+	padding:1em;
+	border-radius: 10px 10px;
+}
+label {
+	color: white;
+	font-size:1.5em;
+}
+select {
+	width:35%;
+	color:#6a3519; 
+	padding:1em;
+	font-size:1em;
+	border-radius:10px 10px;
+}
+.colh {
+	height: 500px;
+}	
+.mapouter {
+	text-align:right;
+	height:800px;
+	width:100%;
+}
+.gmap_canvas {
+	overflow:hidden;
+	background:none!important;
+	height:800px;
+	width:100%;
+}
+iframe {
+	width: 100%;
+	height:800px;
+}

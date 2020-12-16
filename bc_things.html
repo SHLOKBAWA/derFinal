@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Things to do</title>
+	
+	<!-- Linking StyleSheets -->
+	
+	<link href="bc_reset.css" rel="stylesheet" />
+	<link href="bc_grids.css" rel="stylesheet" />
+	<link href="bc_formstyle.css" rel="stylesheet" />
+	<link href="bc_style.css" rel="stylesheet" />
+	<link href="bc_styleT.css" rel="stylesheet" />
+	
+	<!-- Adding Icon hyperlink -->
+	
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' 
+	integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' 
+	crossorigin='anonymous'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+	<header>
+	  <div style="margin-left:0; margin-right:0;" class="row">
+		<div style="box-shadow:4px 10px 4px #2c6886;" class="slideshow-container">
+		<div class="mySlides fade">
+		  <img src="bc_Tback.jpg" style="width:100%;">
+		</div>
+		</div>
+	  </div>
+	  <div style="text-align:center">
+		<span class="dot"></span> 
+	  </div>
+	  <!-- Navigation List Along with logo -->
+	
+	<div class="logorow">
+		<div class="col-1-4">
+		  <a href="index.html"><img id="logo" src="bc_logo.png" /></a>	
+		</div>
+		<div class="col-3-4">
+			<nav>
+			  <ul>
+				<li><a target=_blank class="expand" href="bc_explore.html">Explore</a></li>
+				<li><a class="expand" href="bc_things.html">Things to do</a></li>
+				<li style="margin-right: 40px;"><a target=_blank class="expand" href="bc_places.html">Where to stay</a></li>
+				<a href="#"><i onclick="openNav()" id="icon" class="fas fa-search hovicon effect-2 sub-a" style="font-size:30px; color:#2c6886;"></i></a>
+				<a href="#"><i onclick="openFav()" id="icon" class="fas fa-heart hovicon effect-2 sub-a" style="font-size:30px; color:#2c6886;"></i></a>
+				<a href="#"><i onclick="openList()" id="icon" class="fas fa-shopping-bag hovicon effect-2 sub-a" style="font-size:30px; color:#2c6886;"></i></a>
+				<a href="#"><i onclick="openSign()" id="icon" class="fas fa-user hovicon effect-2 sub-a" style="font-size:30px; color:#2c6886;"></i></a>
+		      </ul>	
+			</nav>
+		</div>
+	</div>
+	</div>
+	<div class="top-right">
+		<nav>
+		  <ul>
+			<li><a href="#">TOURIST</a></li>
+			<li><a href="#">MEETING</a></li>
+			<li><a href="#">SPORTING EVENT</a></li>
+			<li><a href="#">TRAVEL TRADE</a></li>
+			<li><a href="#">MEDIA</a></li>
+			<li><a href="#">INDUSTRY</a></li>
+			<li><a href="#">ABOUT US</a></li>
+		  </ul>
+		</nav>
+	</div>
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;" type="text" placeholder="Search.." name="search">
+		  <button style="background:#2c6886;"type="submit"><i style="color:white;" class="fa fa-search"></i></button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myFav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeFav()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;border-radius:10px 10px; height:100px;" type="text" placeholder="Enter your experience" name="search">
+		  <button style="background:#2c6886;color:white;border-radius:10px 10px;"type="submit">Submit</button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myList" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeList()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;border-radius:10px 10px; height:100px;" type="text" placeholder="Name the places you visited after using our website" name="search">
+		  <button style="background:#2c6886;color:white;border-radius:10px 10px;"type="submit">Submit</button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myAccount" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeSign()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		<input style="margin-bottom:1%;" type="text" placeholder="Username" name="username">
+		<input style="margin-bottom: 1%;"type="text" placeholder="Password" name="password">
+		<button style="background:#2c6886; color:white;" type="submit">Sign In</button>
+	  </form>
+	  </div>
+	</div>
+	</header>
+	
+	<!-- Contents of the page -->
+	<div id="sect" class="row">
+		<p>A cosmopolitan city right on the edge of nature, British Columbia makes it easy to combine
+		an urban gateway with outdoor adventure. From family-friendly fun to thrill-seeking 
+		exploits, from marine exploring to mountaintop luxury, you'll find plenty of things to do in here.</p>
+	</div>
+	<h1>WHAT'S AVAILABLE</h1>
+	<div class="row rowt">
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/adrenaline"><div style="background-image:url(bc_adv.jpg);" class="col-1-3 colt">
+	  <h2 style="color:black;" >ADVENTURE</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/theatre-performing-arts"><div style="background-image:url(bc_per.jpg);"class="col-1-3 colt">
+	  <h2>PERFORMANCE AND CULTURE</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/attractions"><div style="background-image:url(bc_att.jpg);"class="col-1-3 colt">
+	  <h2>ATTRACTIONS</h2>
+	  </div></a>
+	</div>
+	<div class="row rowt">
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/wineries-wine-tours"><div style="background-image:url(bc_wine.jpg);" class="col-1-3 colt">
+	  <h2>BC WINE COUNTRY</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/boating"><div style="background-image:url(bc_boat.jpg);"class="col-1-3 colt">
+	  <h2 style="color:black;" >BOATING & FISHING</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/birdwatching"><div style="background-image:url(bc_bird.jpg);"class="col-1-3 colt">
+	  <h2>BIRD WATCHING</h2>
+	  </div></a>
+	</div>
+	<div class="row rowt">
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/camping"><div style="background-image:url(bc_camp.jpg);" class="col-1-3 colt">
+	  <h2>CAMPING</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/beaches-lakes"><div style="background-image:url(bc_beach.jpg);"class="col-1-3 colt">
+	  <h2 style="color:black;" >BEACHES</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/biking/"><div style="background-image:url(bc_bike.jpg);"class="col-1-3 colt">
+	  <h2>CYCLING & MOUNTAIN BIKING</h2>
+	  </div></a>
+	</div>
+	<div class="row rowt">
+	  <a target=_blank href=""><div style="background-image:url(bc_float.jpg);" class="col-1-3 colt">
+	  <h2>FLOATPLANES</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/hiking"><div style="background-image:url(bc_hike.jpg);"class="col-1-3 colt">
+	  <h2 style="color: black;" >HIKING</h2>
+	  </div></a>
+	  <a target=_blank href="" ><div style="background-image:url(bc_night.jpg);"class="col-1-3 colt">
+	  <h2>NIGHTLIFE</h2>
+	  </div></a>
+	</div>
+	<div class="row rowt">
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/shopping"><div style="background-image:url(bc_shop.jpg);" class="col-1-3 colt">
+	  <h2 style="color:black;" >SHOPPING</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/ski-snowboard"><div style="background-image:url(bc_snow.jpg);"class="col-1-3 colt">
+	  <h2>SKIING & SNOWBOARDING</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/spas-wellness"><div style="background-image:url(bc_spa.jpg);"class="col-1-3 colt">
+	  <h2>SPAS</h2>
+	  </div></a>
+	</div>
+	<div class="row rowt">
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/events"><div style="background-image:url(bc_sport.jpg);" class="col-1-3 colt">
+	  <h2 style="color:black;">SPORTING EVENTS</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/paddling"><div style="background-image:url(bc_water.jpg);"class="col-1-3 colt">
+	  <h2 style="color:black;" >WATER TOURS</h2>
+	  </div></a>
+	  <a target=_blank href="https://www.hellobc.com/things-to-do/whale-watching"><div style="background-image:url(bc_whale.jpg);"class="col-1-3 colt">
+	  <h2 style="color:black;" >WHALE WATCHING</h2>
+	  </div></a>
+	</div>
+	<div class="row">
+	</div>
+	<!-- Footer -->
+	<footer style="background: #2c6886; margin-top: 5%;" id="foot">
+	  <div class="row">
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Quick Links</h3>
+		  <nav>
+		    <ul>
+			  <li><a href="">About Us</a></li>
+			  <li><a href="">Industry</a></li>
+			  <li><a href="">Media</a></li>
+			  <li><a href="">Travel Trade</a></li>
+			  <li><a href="">Sporting Event</a></li>
+			  <li><a href="">Meeting</a></li>
+			  <li><a href="">Tourist</a></li>
+			</ul>
+		  </nav>
+		</div>
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Other Sites</h3>
+		  <nav>
+		    <ul>
+			  <li><a target=_blank href="https://www.destinationbc.ca/Global-Marketing-Partnerships.aspx">Travel Trade</a></li>
+			  <li><a target=_blank href="http://travelmedia.hellobc.com/">Travel Media</a></li>
+			  <li><a target=_blank href="https://www.destinationbc.ca/Global-Marketing-Partnerships.aspx">Destination BC Corporate</a></li>
+			</ul>
+		  </nav>
+		</div>
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Partner Sites</h3>
+		  <nav>
+		    <ul>
+			  <li><a target=_blank href="https://www.britishcolumbia.ca/">Travel & Invest BC</a></li>
+			  <li><a target=_blank href="https://workbc.ca/">WorkBC.ca</a></li>
+			  <li><a target=_blank href="https://www.welcomebc.ca/">WelcomeBC.ca</a></li>
+			</ul>
+		  </nav>
+		</div>
+	  </div>
+	  <div class="row">
+	    <p style="font-size:2em; margin-top:5%; text-align:center;margin-bottom:2%;">@Copyright</p>
+	  </div>
+	</footer>
+	
+	
+	
+	
+	<!-- JavaScript -->
+	
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 9000);
+		}
+	</script>
+	<script>
+		function openNav() {
+		document.getElementById("myNav").style.width = "100%";
+		}
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+		function openSign() {
+		document.getElementById("myAccount").style.width="100%";
+		}
+		function closeSign() {
+		document.getElementById("myAccount").style.width="0%";
+		}
+		function openList() {
+		document.getElementById("myList").style.width="100%";
+		}
+		function closeList() {
+		document.getElementById("myList").style.width="0%";
+		}
+		function openFav() {
+		document.getElementById("myFav").style.width="100%";
+		}
+		function closeFav() {
+		document.getElementById("myFav").style.width="0%";
+		}
+	</script>
+</body>
+
+</html>

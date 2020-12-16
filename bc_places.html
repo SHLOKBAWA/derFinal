@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Where to stay</title>
+	
+	<!-- Linking StyleSheets -->
+	
+	<link href="bc_reset.css" rel="stylesheet" />
+	<link href="bc_grids.css" rel="stylesheet" />
+	<link href="bc_style.css" rel="stylesheet" />
+	<link href="bc_styleP.css" rel="stylesheet" />
+	
+	<!-- Adding Icon hyperlink -->
+	
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' 
+	integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' 
+	crossorigin='anonymous'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+
+<body>
+	<header>
+	  <div style="margin-left:0; margin-right:0;" class="row">
+		<div style="box-shadow:4px 10px 4px  #6a3519 ;" class="slideshow-container">
+		<div class="mySlides fade">
+		  <img src="bc_Pback.jpg" style="width:100%;">
+		</div>
+		</div>
+	  </div>
+	  <div style="text-align:center">
+		<span class="dot"></span> 
+	  </div>
+	  <!-- Navigation List Along with logo -->
+	
+	<div class="logorow">
+		<div class="col-1-4">
+		  <a href="index.html"><img id="logo" src="bc_logo.png" /></a>	
+		</div>
+		<div class="col-3-4">
+			<nav>
+			  <ul>
+				<li><a target=_blank class="expand" href="bc_explore.html">Explore</a></li>
+				<li><a target=_blank class="expand" href="bc_things.html">Things to do</a></li>
+				<li style="margin-right: 40px;"><a class="expand" href="bc_places.html">Where to stay</a></li>
+				<a href="#"><i onclick="openNav()" id="icon" class="fas fa-search hovicon effect-2 sub-a" style="font-size:30px; color: #6a3519 ;"></i></a>
+				<a href="#"><i onclick="openFav()" id="icon" class="fas fa-heart hovicon effect-2 sub-a" style="font-size:30px; color: #6a3519 ;"></i></a>
+				<a href="#"><i onclick="openList()" id="icon" class="fas fa-shopping-bag hovicon effect-2 sub-a" style="font-size:30px; color: #6a3519 ;"></i></a>
+				<a href="#"><i onclick="openSign()" id="icon" class="fas fa-user hovicon effect-2 sub-a" style="font-size:30px; color: #6a3519 ;"></i></a>
+		      </ul>	
+			</nav>
+		</div>
+	</div>
+	</div>
+	<div class="top-right">
+		<nav>
+		  <ul>
+			<li><a href="#">TOURIST</a></li>
+			<li><a href="#">MEETING</a></li>
+			<li><a href="#">SPORTING EVENT</a></li>
+			<li><a href="#">TRAVEL TRADE</a></li>
+			<li><a href="#">MEDIA</a></li>
+			<li><a href="#">INDUSTRY</a></li>
+			<li><a href="#">ABOUT US</a></li>
+		  </ul>
+		</nav>
+	</div>
+	<div id="myNav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;" type="text" placeholder="Search.." name="search">
+		  <button style="background: #6a3519 ;"type="submit"><i style="color:white;" class="fa fa-search"></i></button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myFav" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeFav()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;border-radius:10px 10px; height:100px;" type="text" placeholder="Enter your experience" name="search">
+		  <button style="background: #6a3519; color:white;border-radius:10px 10px;"type="submit">Submit</button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myList" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeList()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		  <input style="margin-bottom: 1%;border-radius:10px 10px; height:100px;" type="text" placeholder="Name the places you visited after using our website" name="search">
+		  <button style="background: #6a3519 ;color:white;border-radius:10px 10px;"type="submit">Submit</button>
+	  </form>
+	  </div>
+	</div>
+	<div id="myAccount" class="overlay">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeSign()">&times;</a>
+	  <div class="overlay-content">
+	  <form action="/action_page.php">
+		<input style="margin-bottom:1%;" type="text" placeholder="Username" name="username">
+		<input style="margin-bottom: 1%;"type="text" placeholder="Password" name="password">
+		<button style="background: #6a3519 ; color:white;" type="submit">Sign In</button>
+	  </form>
+	  </div>
+	</div>
+	</header>
+	
+	<!-- Content of the page -->
+	<div id="sect" class="row">
+		<p>Discover places to stay across BC, including hotels, campgrounds, and more.</p>
+	</div>
+	<div id="sect" class="row">
+		<form>
+		<div class="col-2-3">
+		  <div class="row">
+			<label>LOCATION</label>
+		  </div>
+		  <input id="input" type="text" placeholder="Search" >
+		  <select id="resort" onchange="display1()">
+		    <option>Select Ski Resort</option>
+			<option>Big White Ski Resort</option>
+			<option>Fernie Alpine Resort</option>
+			<option>Kicking Horse Mountain Resort</option>
+			<option>Kimberley Apline Resort</option>
+			<option>Panaroma Mountain Resort</option>
+			<option>Red Mountain Resort</option>
+			<option>SilverStar Mountain Resort</option>
+			<option>Sun Peaks Resort</option>
+		  </select>
+		  <select>
+			<option>Select Area</option>
+			<option>Cariboo Chilcotin Coast</option>
+			<option>Kootney Rockies</option>
+			<option>Northern British Columbia</option>
+			<option>Thompson Okanagan</option>
+			<option>Vancouver Island</option>
+			<option>Vancouver, Coast & Mountain</option>
+		  </select>
+		</div>
+		<div class="col-1-3">
+		  <div class="row">
+			<label>ACCOMMODATIONS</label>
+		  </div>
+		  <select style="width:100%;">
+			<option>Select Accommodations</option>
+			<option>Bed & Breakfast</option>
+			<option>Cabins & Cottages</option>
+			<option>Campgrounds & RV Parks</option>
+			<option>Hostels</option>
+			<option>Hotels</option>
+			<option>Resorts & Wilderness Lodges</option>
+		  </select>
+		</div>
+		<form>
+	</div>	
+	<div class="mapouter">
+		<div class="gmap_canvas">
+		<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+		</iframe>
+		<iframe id="big" src="https://www.google.com/maps/embed?pb=!4v1543852127756!6m8!1m7!1sCAoSLEFGMVFpcE82Zkczcy1RVGh5c2pCR0RsTlRiaEluVmZMcERrM3F3MU5uQU1n!2m2!1d49.7216277!2d-118.9265789!3f51.28213842291956!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="fernie" src="https://www.google.com/maps/embed?pb=!4v1543852341160!6m8!1m7!1sCAoSLEFGMVFpcE9SUGZoX05nalBmUlhDbkhRZGF3RjQwLWJraE1NOU1fcWtjNGJa!2m2!1d49.46385369999999!2d-115.0866092!3f108.10089947410745!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="kick" src="https://www.google.com/maps/embed?pb=!4v1543852588599!6m8!1m7!1sodY8cXI-FmV8m1fPuG7tjA!2m2!1d51.29778026454321!2d-117.0482154195251!3f123.70137782447843!4f0!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="kim" src="https://www.google.com/maps/embed?pb=!4v1543852779463!6m8!1m7!1sCAoSLEFGMVFpcE54NkswM1lyZ2R4Y1RqWWxwQm1YM1ItamEyRFdqZU4taGhYOTJU!2m2!1d49.69106825519032!2d-116.0112996058791!3f214.82289574208812!4f-20.701325194139116!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="pan" src="https://www.google.com/maps/embed?pb=!4v1543852884903!6m8!1m7!1sCAoSLEFGMVFpcE03UnRaUlpjSWlDcGZpS1NXRS1fcWdiMWJueG92b0xHVFdjcVFL!2m2!1d50.45941029999999!2d-116.2364636!3f12.570580555103128!4f-0.6713827226760571!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="red" src="https://www.google.com/maps/embed?pb=!4v1543853155999!6m8!1m7!1sCAoSLEFGMVFpcE1YSk5YQ3FqVlp0N0FtVkRsRU9KazNVekRhaXUzT0hMYjVBMHg5!2m2!1d49.1024039!2d-117.8194626!3f335.3184990268126!4f-25.85805865493701!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="silver" src="https://www.google.com/maps/embed?pb=!4v1543853295950!6m8!1m7!1sCAoSLEFGMVFpcFBzLUlRb3ZaVUsyYlQ1dk5hSTJkQW1DbkI2U0hicHdFQnlhblJk!2m2!1d50.36950008765347!2d-119.0635602548718!3f209.6301316810153!4f-21.49727723893568!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe id="sun" src="https://www.google.com/maps/embed?pb=!4v1543853485125!6m8!1m7!1sCAoSLEFGMVFpcE1VSjdtWEtubTlITFJvbXFHZ1B5Vlp3dlRUUHl5bmFudzlRU1Y0!2m2!1d50.87745899317573!2d-119.9101420139473!3f88.71723235150975!4f-21.856490471694954!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<a href="https://www.crocothemes.net"></a>
+		</div>
+	</div>
+	<!-- Footer -->
+	<footer style="background: #6a3519; margin-top: 5%;" id="foot">
+	  <div class="row">
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Quick Links</h3>
+		  <nav>
+		    <ul>
+			  <li><a href="">About Us</a></li>
+			  <li><a href="">Industry</a></li>
+			  <li><a href="">Media</a></li>
+			  <li><a href="">Travel Trade</a></li>
+			  <li><a href="">Sporting Event</a></li>
+			  <li><a href="">Meeting</a></li>
+			  <li><a href="">Tourist</a></li>
+			</ul>
+		  </nav>
+		</div>
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Other Sites</h3>
+		  <nav>
+		    <ul>
+			  <li><a target=_blank href="https://www.destinationbc.ca/Global-Marketing-Partnerships.aspx">Travel Trade</a></li>
+			  <li><a target=_blank href="http://travelmedia.hellobc.com/">Travel Media</a></li>
+			  <li><a target=_blank href="https://www.destinationbc.ca/Global-Marketing-Partnerships.aspx">Destination BC Corporate</a></li>
+			</ul>
+		  </nav>
+		</div>
+		<div class="col-1-3">
+		  <h3 style="font-family: deep;">Partner Sites</h3>
+		  <nav>
+		    <ul>
+			  <li><a target=_blank href="https://www.britishcolumbia.ca/">Travel & Invest BC</a></li>
+			  <li><a target=_blank href="https://workbc.ca/">WorkBC.ca</a></li>
+			  <li><a target=_blank href="https://www.welcomebc.ca/">WelcomeBC.ca</a></li>
+			</ul>
+		  </nav>
+		</div>
+	  </div>
+	  <div class="row">
+	    <p style="font-size:2em; margin-top:5%; text-align:center;margin-bottom:2%;">@Copyright</p>
+	  </div>
+	</footer>
+	<!-- JavaScript -->
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 9000);
+		}
+	</script>
+	<script>
+		function openNav() {
+		document.getElementById("myNav").style.width = "100%";
+		}
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+		function openSign() {
+		document.getElementById("myAccount").style.width="100%";
+		}
+		function closeSign() {
+		document.getElementById("myAccount").style.width="0%";
+		}
+		function openList() {
+		document.getElementById("myList").style.width="100%";
+		}
+		function closeList() {
+		document.getElementById("myList").style.width="0%";
+		}
+		function openFav() {
+		document.getElementById("myFav").style.width="100%";
+		}
+		function closeFav() {
+		document.getElementById("myFav").style.width="0%";
+		}
+	</script>
+	<script>
+	function display1()
+	{
+		var x=document.getElementById("resort").selectedIndex;
+		switch(x)
+		{
+			case 0:
+			document.getElementById("gmap_canvas").style.display="block";
+			break;
+			case 1:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="block";
+			break;
+			case 2:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="block";
+			break;
+			case 3:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="block";
+			break;
+			case 4:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="none";
+			document.getElementById("kim").style.display="display";
+			break;
+			case 5:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="none";
+			document.getElementById("kim").style.display="none";
+			document.getElementById("pan").style.display="display";
+			break;
+			case 6:
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="none";
+			document.getElementById("kim").style.display="none";
+			document.getElementById("pan").style.display="none";
+			document.getElementById("red").style.display="display";
+			break;
+			case 7:	
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="none";
+			document.getElementById("kim").style.display="none";
+			document.getElementById("pan").style.display="none";
+			document.getElementById("red").style.display="none";
+			document.getElementById("silver").style.display="display";
+			break;
+			case 8:	
+			document.getElementById("gmap_canvas").style.display="none";
+			document.getElementById("big").style.display="none";
+			document.getElementById("fernie").style.display="none";
+			document.getElementById("kick").style.display="none";
+			document.getElementById("kim").style.display="none";
+			document.getElementById("pan").style.display="none";
+			document.getElementById("red").style.display="none";
+			document.getElementById("silver").style.display="none";
+			document.getElementById("sun").style.display="display";
+			break;
+		}
+	}
+	</script>
+</body>
+
+</html>
